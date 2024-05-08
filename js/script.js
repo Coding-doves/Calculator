@@ -35,6 +35,8 @@ function calculate(){
             display.value = display.value.replace(/%/g, '*0.01');
             // Replace modulo (%) with the modulo operator
             display.value = display.value.replace(/mod/gi, '%');
+            // Replace raised to(^) power with the ** operator
+            display.value = display.value.replace(/\^/gi, '**');
 
             display.value = eval(display.value);
         }
